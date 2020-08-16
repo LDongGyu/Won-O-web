@@ -1,8 +1,10 @@
 package com.wono.springboot.web.dto;
 
+import com.wono.springboot.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 
 @Getter
 @NoArgsConstructor
