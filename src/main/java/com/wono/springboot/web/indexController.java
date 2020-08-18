@@ -1,5 +1,6 @@
 package com.wono.springboot.web;
 
+import com.wono.springboot.api.NaverApi;
 import com.wono.springboot.service.posts.PostsService;
 import com.wono.springboot.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +16,9 @@ public class indexController {
     private final PostsService postsService;
 
     @GetMapping("/")
-    public String index(Model model){
+    public String index(Model model) {
+        String response = NaverApi.naverApiResult();
+        model.addAttribute("result",response);
         return "index";
     }
 
